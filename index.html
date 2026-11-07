@@ -2,15 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>MegaRGJ — Games Programmer</title>
-    <script type="module" crossorigin src="/assets/index-CD6EJCOx.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DEpp5paJ.css">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <script type="module" crossorigin src="./assets/main-DJwFFiSl.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/html-NXNjT_QK.js">
+    <link rel="modulepreload" crossorigin href="./assets/projects-aiqcOh5O.js">
+    <link rel="modulepreload" crossorigin href="./assets/posts-BK8OjWHH.js">
+    <link rel="stylesheet" crossorigin href="./assets/html-Cm8qdNvP.css">
   </head>
   <body>
-    <main id="app">
-      <h1>Hello, World!</h1>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">MegaRGJ</a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#projects">Projects</a>
+          <a href="yaplog.html">Yaplog</a>
+          <a href="#contact">Contact</a>
+          <a href="#" class="nav-cv">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section id="about" class="wrap hero">
+        <div class="portrait" role="img" aria-label="Photo placeholder">
+          <span>RGJ</span>
+        </div>
+        <div class="hero-head">
+          <p class="eyebrow">Gameplay &amp; Engine Programmer</p>
+          <h1>MegaRGJ</h1>
+        </div>
+        <div class="hero-body">
+          <p>
+            I write the systems that make games feel good to play: combat, AI, tools and the engine code underneath
+            them. This is a short intro about who you are, what you have shipped and what kind of role you are
+            looking for next.
+          </p>
+          <p class="hero-links">
+            <a class="btn btn-primary" href="#">Download CV</a>
+            <a class="btn" href="https://github.com/MegaRGJ">GitHub</a>
+            <a class="btn" href="#contact">Contact</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="wrap projects">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="muted">Newest first.</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section id="yaplog" class="wrap latest">
+        <div class="section-head">
+          <h2>Latest yaps</h2>
+          <p class="muted">From the yaplog: notes on what I'm building.</p>
+        </div>
+        <ul class="latest-list" id="latest-yaps"></ul>
+        <p class="latest-foot"><a href="yaplog.html">Browse the yaplog →</a></p>
+      </section>
+
+      <section id="contact" class="wrap contact">
+        <h2>Contact</h2>
+        <p class="muted">Open to gameplay and engine programming roles.</p>
+        <dl class="contact-list">
+          <div><dt>Email</dt><dd>you@example.com</dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/MegaRGJ">github.com/MegaRGJ</a></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/ryan-glen-johnson/">linkedin.com/in/ryan-glen-johnson</a></dd></div>
+        </dl>
+      </section>
     </main>
+
+    <footer class="wrap site-footer">
+      <span>© 2026 MegaRGJ</span>
+    </footer>
+
   </body>
 </html>
