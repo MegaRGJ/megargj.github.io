@@ -10,7 +10,7 @@ function render(): void {
   const index = list.findIndex((p) => p.slug === slug);
 
   if (index === -1) {
-    document.title = 'Project not found — MegaRGJ';
+    document.title = 'Project not found — Ryan Johnson';
     root.innerHTML = `
       <a class="back" href="index.html#projects">← All projects</a>
       <div class="project-head">
@@ -32,7 +32,7 @@ function render(): void {
     ['Platforms', project.facts.platform],
   ];
 
-  document.title = `${project.title} — MegaRGJ`;
+  document.title = `${project.title} — Ryan Johnson`;
   root.innerHTML = `
     <a class="back" href="index.html#projects">← All projects</a>
     <div class="project-head">

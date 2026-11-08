@@ -1,7 +1,7 @@
 import './style.css';
 import { marked } from 'marked';
 import { escapeHtml } from './html';
-import { formatDay, shortHash, sortedPosts, type Post } from './posts';
+import { formatDay, sortedPosts, type Post } from './posts';
 
 // Wide screens show the post list and the open post side by side. Narrow
 // screens show one at a time: the list, or the post picked from it.
@@ -45,7 +45,7 @@ function renderIndex(): void {
           <li>
             <a class="yap-item" href="#${p.slug}"${p.slug === open ? ' aria-current="page"' : ''}>
               <span class="yap-item-title">${escapeHtml(p.title)}</span>
-              <span class="yap-item-meta"><span class="log-hash">${shortHash(p.slug)}</span> ${formatDay(p.date)}</span>
+              <span class="yap-item-meta"><span class="log-date">${formatDay(p.date)}</span></span>
             </a>
           </li>`,
           )
@@ -68,7 +68,7 @@ function renderReader(): void {
   document.body.classList.toggle('reading', Boolean(slug));
 
   if (!post) {
-    document.title = 'Yaplog — MegaRGJ';
+    document.title = 'Yaplog — Ryan Johnson';
     reader.innerHTML = slug
       ? `<a class="back yap-back" href="#">← All posts</a>
          <h1>Post not found</h1>
@@ -81,13 +81,12 @@ function renderReader(): void {
   const newer = list[at - 1];
   const older = list[at + 1];
 
-  document.title = `${post.title} — MegaRGJ`;
+  document.title = `${post.title} — Ryan Johnson`;
   reader.innerHTML = `
     <a class="back yap-back" href="#">← All posts</a>
     <div class="project-head">
       <div class="log-meta">
-        <span class="log-hash">${shortHash(post.slug)}</span>
-        <time datetime="${post.date}">${formatDay(post.date)}</time>
+        <time class="log-date" datetime="${post.date}">${formatDay(post.date)}</time>
         <span class="log-tags">${post.tags.map((t) => `#${escapeHtml(t)}`).join(' ')}</span>
       </div>
       <h1>${escapeHtml(post.title)}</h1>

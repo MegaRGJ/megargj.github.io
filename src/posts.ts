@@ -59,13 +59,6 @@ export function formatDay(date: string): string {
   return `${Number(day)} ${MONTHS[Number(month) - 1]} ${year}`;
 }
 
-// A short commit-style hash for decoration, stable per post
-export function shortHash(slug: string): string {
-  let hash = 0x811c9dc5;
-  for (const ch of slug) hash = Math.imul(hash ^ ch.charCodeAt(0), 0x01000193) >>> 0;
-  return hash.toString(16).padStart(8, '0').slice(0, 7);
-}
-
 // The "latest posts" list on the home page
 export function renderLatest(list: HTMLElement, count: number): void {
   list.innerHTML = sortedPosts()
@@ -76,7 +69,7 @@ export function renderLatest(list: HTMLElement, count: number): void {
         <a href="yaplog.html#${post.slug}">
           <span class="latest-text">
             <span class="latest-title">${escapeHtml(post.title)}</span>
-            <span class="latest-meta"><span class="log-hash">${shortHash(post.slug)}</span> ${formatDay(post.date)}</span>
+            <span class="latest-meta"><span class="log-date">${formatDay(post.date)}</span></span>
           </span>
           <span class="latest-arrow" aria-hidden="true">→</span>
         </a>

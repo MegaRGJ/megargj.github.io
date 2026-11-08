@@ -1,6 +1,7 @@
 import './style.css';
 import { escapeHtml } from './html';
 import { formatDate, hasPage, mediaFor, pillsFor, sortedProjects, type Project } from './projects';
+import { initNavHighlight } from './nav';
 import { renderLatest } from './posts';
 import { initRoute } from './route';
 
@@ -44,4 +45,5 @@ timeline.innerHTML = `
   <div class="cap"><div class="node"></div><span class="cap-label">Start</span></div>`;
 
 initRoute(timeline);
+initNavHighlight();
 renderLatest(document.querySelector<HTMLElement>('#latest-yaps')!, 3);

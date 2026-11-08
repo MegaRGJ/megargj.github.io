@@ -152,7 +152,6 @@ h2 {
 }
 
 .nav .nav-cv {
-  color: var(--accent);
   font-weight: 600;
 }
 
@@ -538,11 +537,11 @@ h2 {
   white-space: nowrap;
 }
 
-.nav a[aria-current='page'] {
-  color: var(--fg);
+.nav a[aria-current] {
+  color: var(--accent);
 }
 
-/* Post meta line: commit-style hash, date and tags */
+/* Post meta line: date and tags */
 .log-meta {
   display: flex;
   flex-wrap: wrap;
@@ -551,9 +550,10 @@ h2 {
   color: var(--muted);
 }
 
-.log-hash {
+.log-date {
   color: var(--accent);
   font-family: var(--font-mono);
+  font-weight: 500;
 }
 
 /* Latest yaps on the home page */
