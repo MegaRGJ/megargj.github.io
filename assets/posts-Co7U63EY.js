@@ -1,4 +1,4 @@
-import{t as e}from"./html-BCcAxFUi.js";var t=Object.assign({"../posts/test.md":`---
+import{t as e}from"./html-DEKDZmuS.js";var t=Object.assign({"../posts/test.md":`---
 title: Test
 date: 2026-11-07
 summary: test test

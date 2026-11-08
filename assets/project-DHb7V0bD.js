@@ -1,4 +1,4 @@
-import{t as e}from"./html-BCcAxFUi.js";import{a as t,i as n,n as r,r as i,t as a}from"./projects-aiqcOh5O.js";var o=document.querySelector(`#project`);function s(){let s=t().filter(r),c=decodeURIComponent(location.hash.slice(1)),l=s.findIndex(e=>e.slug===c);if(l===-1){document.title=`Project not found — Ryan Johnson`,o.innerHTML=`
+import{t as e}from"./html-DEKDZmuS.js";import{a as t,i as n,n as r,r as i,t as a}from"./projects-aiqcOh5O.js";var o=document.querySelector(`#project`);function s(){let s=t().filter(r),c=decodeURIComponent(location.hash.slice(1)),l=s.findIndex(e=>e.slug===c);if(l===-1){document.title=`Project not found — Ryan Johnson`,o.innerHTML=`
       <a class="back" href="index.html#projects">← All projects</a>
       <div class="project-head">
         <h1>Project not found</h1>
